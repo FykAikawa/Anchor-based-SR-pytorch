@@ -30,7 +30,7 @@ def ycbcr_to_rgb(image):
 
 upsampler = nn.Upsample(scale_factor=4, mode='bilinear')
 
-class Base7(nn.Module):
+class Base7(nn.Module): #my original model
     def __init__(self):
         super(Base7, self).__init__()
         self.in_channels = 3
