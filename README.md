@@ -4,4 +4,4 @@ scale rate can be changed by changing self.scale of Base7 class.<br>
 the number of channels of input images and output images can be changed by changing self.in_channel and self.out_channel.<br>
 
 **How to use**<br>
-simply make an instance of Basee7 class by calling Base7().to("cuda:0")<br>
+simply make an instance of Base7 class by calling Base7().to("cuda:0")<br>
