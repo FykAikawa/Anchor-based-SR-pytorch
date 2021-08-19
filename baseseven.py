@@ -30,7 +30,7 @@ def ycbcr_to_rgb(image):
 
 upsampler = nn.Upsample(scale_factor=4, mode='bilinear')
 
-class Base7(nn.Module): #my original model
+class Base7(nn.Module):
     def __init__(self):
         super(Base7, self).__init__()
         self.in_channels = 3
@@ -57,7 +57,7 @@ class Base7(nn.Module): #my original model
         out = torch.clamp(out,min=0,max=1)
         return out
 
-class Base7yuv(nn.Module):
+class Base7yuv(nn.Module): #my original model, only super-resolve Y channel
     def __init__(self):
         super(Base7, self).__init__()
         self.in_channels = 1
