@@ -35,7 +35,7 @@ class Base7(nn.Module):
         super(Base7, self).__init__()
         self.in_channels = 3
         self.out_channels = 3
-        self.m = 5
+        self.m = 4
         self.num_fea = 28
         self.scale = 4
         self.conv1 = nn.Conv2d(self.in_channels, self.num_fea, kernel_size=3, stride=1, padding=1)
@@ -62,7 +62,7 @@ class Base7yuv(nn.Module): #my original model, only super-resolve Y channel
         super(Base7, self).__init__()
         self.in_channels = 1
         self.out_channels = 1
-        self.m = 5
+        self.m = 4
         self.num_fea = 28
         self.scale = 4
         self.conv1 = nn.Conv2d(self.in_channels, self.num_fea, kernel_size=3, stride=1, padding=1)
