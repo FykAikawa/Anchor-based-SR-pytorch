@@ -45,7 +45,7 @@ class Base7(nn.Module):
         self.ps = nn.PixelShuffle(self.scale)
     def forward(self, inputs):
         out = inputs
-        upsampled_inp = torch.cat([out for _ in range(self.scale**2)],dim=1)
+        upsampled_inp = torch.cat([torch.cat([out[:, [i], ...] for _ in range(self.scale**2)], dim=1) for i in range(self.in_channels)], dim=1)
         out = self.conv1(out)
         out = torch.nn.functional.relu_(out)
         out = self.convs(out)     
